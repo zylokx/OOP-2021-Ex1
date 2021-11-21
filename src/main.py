@@ -1,6 +1,8 @@
 import argparse
 from Building import Building
 from Elevator import Elevator
+from Calls import Calls
+from Algorithm import Algorithm
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Ex1: offline elevator algorithm')
@@ -11,3 +13,7 @@ if __name__ == '__main__':
 
     building = Building(args.building)
     print(building)
+    calls = Calls(args.calls)
+    algo = Algorithm(building, calls.calls)
+    algo.run_algo()
+    calls.output_new_calls(args.output)
