@@ -1,4 +1,3 @@
-import math
 from enum import IntEnum
 import csv
 
@@ -30,9 +29,6 @@ class Calls:
 
             for row in csv_reader:
                 self.calls.append(row)
-
-    # def get_direction(self, call):
-    #     return Direction.UP if call[3] - call[2] > 0 else Direction.DOWN
 
     def __str__(self):
         st = ""

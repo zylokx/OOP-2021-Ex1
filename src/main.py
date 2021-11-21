@@ -1,6 +1,5 @@
 import argparse
 from Building import Building
-from Elevator import Elevator
 from Calls import Calls
 from Algorithm import Algorithm
 

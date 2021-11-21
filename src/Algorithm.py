@@ -31,7 +31,6 @@ class Algorithm:
                 self.last_two_calls_timestamps_in_building.append(self.calls[0][1])
 
                 for elev in self.elevators:
-                    # candidate_paths = elev.paths[:]
                     elev.update_elevator(self.last_two_calls_timestamps_in_building)
                     waiting_time = elev.get_waiting_time_for_future_call(call)
                     if waiting_time < best_time:

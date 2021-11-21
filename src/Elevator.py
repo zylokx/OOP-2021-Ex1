@@ -81,7 +81,6 @@ class Elevator:
         return waiting_time
 
     def insert_call(self, call, paths):
-        # call_timestamp = call[1]
         call_src = call[2]
         call_dest = call[3]
 
@@ -92,10 +91,7 @@ class Elevator:
                 paths.append([self.position, call_src])
                 paths.append([call_src, call_dest])
         else:
-            last_path_src = paths[-1][0]
             last_path_dest = paths[-1][1]
-            # arrive_to_src_before_call = math.ceil(elevator.last_call_timestamp) + math.ceil(abs(call_dest - call_src) / elevator.speed) <= call_timestamp
-            # if Calls.get_direction(last_path_src, last_path_dest) == Calls.get_direction(call_src, call_dest):
             paths.append([last_path_dest, call_src])
             paths.append([call_src, call_dest])
 

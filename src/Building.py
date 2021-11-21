@@ -1,6 +1,5 @@
 import json
 from Elevator import Elevator
-import collections
 
 
 class Building:
